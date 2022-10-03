@@ -11,9 +11,9 @@ export const Description = () => {
     <div>
         <p>Appは未定です</p>
       <DogImage url={dogUrl} alt="犬の画像" />
-      <button onClick={async () => {
+      <button type='button' onClick={async () => {
         const response = await fetch("https://dog.ceo/api/breeds/image/random");
-        const data = await response.json()
+        const data = await response.json();
         if (data.status == "success") {
          setDogUrl(data.message)
         } 
